@@ -6,7 +6,7 @@ from scripts.extract_details import get_details
 from scripts.generate_readme import write_readme
 
 def main():
-    tex_file = "test_project.tex"
+    tex_file = "main.tex"
     word_count = get_word_count(tex_file)
     structure = get_structure(tex_file)
     format_info = get_format(tex_file)
