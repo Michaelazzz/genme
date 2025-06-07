@@ -1,0 +1,5 @@
+name: "GenMe"
+description: "Generates project metrics for LaTeX documents"
+runs:
+  using: "docker"
+  image: "Dockerfile"
