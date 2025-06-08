@@ -1,22 +1,24 @@
-# 📊 LaTeX Project Metrics
+# 📊 (Gen)erate (Me)trics
 
-## 📜 Title & Author
-- **Title**: Test Document for Metrics
-- **Author**: Jane Doe
+This GitHub Action analyzes a LaTeX project, collecting key metrics like:
 
-## 📝 Word Count
--1 words
+- 📄 Word count
+- 📚 Section structure
+- 🎨 Formatting and packages
+- 🔗 Reference style and citation count
+- ✍️ Author and title
 
-## 📚 Structure
-- Section: Introduction
-  - Subsection: Background
-- Section: Methods
+It generates a summary in the `README.md` of the LaTeX repo.
 
-## 🧉 Formatting
-- Document Class: `article`
-- Options: `12pt`
-- Packages: graphicx, amsmath, natbib, url
+## 🔧 Inputs
 
-## 🔗 References
-Reference Style: APA
-- **Total citations used**: 3
+| Name       | Description                   | Default        |
+|------------|-------------------------------|----------------|
+| `tex_file` | Path to your main `.tex` file | `project.tex`  |
+
+## 🚀 Usage
+
+```yaml
+uses: Michaelazzz/genme@v1.2
+with:
+  tex_file: "main.tex"

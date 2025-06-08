@@ -1,3 +1,5 @@
+import sys
+
 from scripts.extract_word_count import get_word_count
 from scripts.extract_structure import get_structure
 from scripts.extract_format import get_format
@@ -6,7 +8,7 @@ from scripts.extract_details import get_details
 from scripts.generate_readme import write_readme
 
 def main():
-    tex_file = "main.tex"
+    tex_file = sys.argv[1] if len(sys.argv) > 1 else "main.tex"
     word_count = get_word_count(tex_file)
     structure = get_structure(tex_file)
     format_info = get_format(tex_file)

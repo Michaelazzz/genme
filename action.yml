@@ -1,5 +1,17 @@
 name: "GenMe"
 description: "Generates project metrics for LaTeX documents"
+inputs:
+  tex_file:
+    description: "Path to the main .tex file"
+    required: false
+    default: "project.tex"
+
 runs:
   using: "docker"
   image: "Dockerfile"
+  args:
+    - ${{ inputs.tex_file }}
+
+branding:
+  icon: "file-text"
+  color: "blue"
