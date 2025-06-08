@@ -1,4 +1,4 @@
-name: "GenMe"
+name: "(Gen)erate (Me)trics for LaTeX Documents"
 description: "Generates project metrics for LaTeX documents"
 inputs:
   tex_file:
