@@ -8,7 +8,12 @@ from scripts.extract_details import get_details
 from scripts.generate_readme import write_readme
 
 def main():
-    tex_file = sys.argv[1] if len(sys.argv) > 1 else "main.tex"
+    if len(sys.argv) < 2:
+        print("Usage: python main.py <tex_file>")
+        sys.exit(1)
+
+    tex_file = sys.argv[1]
+    
     word_count = get_word_count(tex_file)
     structure = get_structure(tex_file)
     format_info = get_format(tex_file)
